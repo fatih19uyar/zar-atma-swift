@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		37AF5BE02D43100D00F53115 /* README.rd in Resources */ = {isa = PBXBuildFile; fileRef = 37AF5BDF2D43100100F53115 /* README.rd */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		370BF2162D3FB9B10062F9E3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,6 +31,7 @@
 		370BF2052D3FB9AF0062F9E3 /* ZarAtmaca.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZarAtmaca.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		370BF2152D3FB9B10062F9E3 /* ZarAtmacaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZarAtmacaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		370BF21F2D3FB9B10062F9E3 /* ZarAtmacaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZarAtmacaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		37AF5BDF2D43100100F53115 /* README.rd */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.rd; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -79,6 +84,7 @@
 				370BF2182D3FB9B10062F9E3 /* ZarAtmacaTests */,
 				370BF2222D3FB9B10062F9E3 /* ZarAtmacaUITests */,
 				370BF2062D3FB9AF0062F9E3 /* Products */,
+				37AF5BDF2D43100100F53115 /* README.rd */,
 			);
 			sourceTree = "<group>";
 		};
@@ -212,6 +218,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37AF5BE02D43100D00F53115 /* README.rd in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
