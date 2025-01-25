@@ -8,44 +8,57 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var 	leftDicelNumber = 1
-    @State var rightDicelNumber = 1
+    @State private var 	leftDicelNumber = 1
+    @State private var rightDicelNumber = 1
+    @State private var isLoginPageActive = false
     
     var body: some View {
-        ZStack{
-            Image("background")
-                .resizable()
-                .scaledToFill()
-                .ignoresSafeArea()
-            VStack (alignment: .center, spacing: 50){
-                Image("logo")
+        NavigationStack{
+            ZStack{
+                Image("background")
                     .resizable()
-                    .frame(width: 200, height: 200)
-                Text("Kumarı Daima Oynatan Kazanır")
-                    .foregroundStyle(.white)
-                    .font(.headline)
+                    .scaledToFill()
+                    .ignoresSafeArea()
+                VStack (alignment: .center, spacing: 50){
+                    Image("logo")
+                        .resizable()
+                        .frame(width: 200, height: 200)
+                    Text("Kumarı Daima Oynatan Kazanır")
+                        .foregroundStyle(.white)
+                        .font(.headline)
+                    
+                    HStack{
+                        ZarView(n : leftDicelNumber)
+                        ZarView(n : rightDicelNumber)
+                    }
+                    Button(action : {
+                        
+                        leftDicelNumber = .random(in: 1...6)
+                        rightDicelNumber = .random(in: 1...6)
+                        
+                    }){
+                        Text("Zar At")
+                            .font(.title)
+                            .frame(width: 200, height: 90)
+                            .padding()
+                            .background(.white)
+                            .cornerRadius(20)
+                            .padding()
+                    }
+                    NavigationLink(destination: LoginPage()){
+                        Text("Status")
+                            .font(.title)
+                            .frame(width: 100, height: 40)
+                            .padding()
+                            .background(.white)
+                            .cornerRadius(40)
+                    }
+
+                }
                 
-                HStack{
-                    ZarView(n : leftDicelNumber)
-                    ZarView(n : rightDicelNumber)
-                }
-                Button(action : {
-                    
-                    leftDicelNumber = .random(in: 1...6)
-                    rightDicelNumber = .random(in: 1...6)
-                    
-                }){
-                    Text("Zar At")
-                        .font(.title)
-                        .frame(width: 200, height: 90)
-                        .padding()
-                        .background(.white)
-                        .cornerRadius(20)
-                        .padding()
-                }
             }
-            
         }
+     
     }
 }
 
